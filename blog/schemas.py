@@ -1,7 +1,38 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import List
 
-class Blog(BaseModel):
+class BlogBase(BaseModel):
     title: str
     body: str
-    published: Optional[bool]
+
+class Blog(BlogBase):
+    class Config():
+        orm_mode = True
+
+class User(BaseModel):
+    name: str
+    email: str
+    password: str
+
+class UserOut(BaseModel):
+    name: str
+    email: str
+
+    class Config():
+        orm_mode = True
+
+class UserOutWithList(BaseModel):
+    name: str
+    email: str
+    blogs: List[Blog] = []
+
+    class Config():
+        orm_mode = True
+
+class BlogOut(BaseModel):
+    title: str
+    body: str
+    creator: UserOut
+
+    class Config():
+        orm_mode = True

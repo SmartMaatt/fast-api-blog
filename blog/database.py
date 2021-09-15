@@ -14,3 +14,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Later we will inherit from this class to create each of the database models or classes
 Base = declarative_base()
+
+# Create connection with database
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
