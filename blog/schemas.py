@@ -14,14 +14,14 @@ class User(BaseModel):
     email: str
     password: str
 
-class UserOut(BaseModel):
+class UserOutput(BaseModel):
     name: str
     email: str
 
     class Config():
         orm_mode = True
 
-class UserOutWithList(BaseModel):
+class UserOutputWithList(BaseModel):
     name: str
     email: str
     blogs: List[Blog] = []
@@ -29,10 +29,14 @@ class UserOutWithList(BaseModel):
     class Config():
         orm_mode = True
 
-class BlogOut(BaseModel):
+class BlogOutput(BaseModel):
     title: str
     body: str
-    creator: UserOut
+    creator: UserOutput
 
     class Config():
         orm_mode = True
+
+class UserLoginAuth(BaseModel):
+    email: str
+    password: str

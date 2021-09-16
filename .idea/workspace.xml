@@ -7,11 +7,11 @@
     <list default="true" id="19d7d1a9-7f04-48ea-9ad8-4139e0d50404" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.db" beforeDir="false" afterPath="$PROJECT_DIR$/blog.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/hashing.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/hashing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/blog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/routers/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1y7OKwRd0cm33LFtulmHsiIV9gw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -80,7 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1631599099388</updated>
       <workItem from="1631599104858" duration="9829000" />
-      <workItem from="1631709531957" duration="9547000" />
+      <workItem from="1631709531957" duration="9821000" />
+      <workItem from="1631768338006" duration="5523000" />
     </task>
     <servers />
   </component>
