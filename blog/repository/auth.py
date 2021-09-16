@@ -1,17 +1,18 @@
 from fastapi import status, HTTPException
-from .. import schemas, models
+from .. import models, JWTtoken
 from sqlalchemy.orm import Session
-from ..hashing import pwd_cxt
+from ..hashing import Hash
 
-def login(request: schemas.UserLoginAuth, db: Session):
-    user = db.query(models.User).filter(models.User.email == request.email).first()
+def login(request, db: Session):
+    user = db.query(models.User).filter(models.User.email == request.username).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail="Invalid credentials")
 
-    if not pwd_cxt.verify(request.password, user.password):
+    if not Hash.verify(request.password, user.password):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail="Invalid password")
 
-    # TO DO - auth token
-    return user
+    access_token = JWTtoken.create_access_token(data={"sub": user.email})
+    return {"access_token": access_token, "token_type": "bearer"}
+    # return user
